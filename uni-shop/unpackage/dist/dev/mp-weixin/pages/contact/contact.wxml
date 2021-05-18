@@ -1,0 +1,1 @@
+<view class="contact"><image src="../../static/aboutus.jpeg"></image><view class="info"><view data-event-opts="{{[['tap',[['phone',['$event']]]]]}}" bindtap="__e">联系电话:180-9149-1209(点击拨打)</view><view>地址:陕西省咸阳市秦都区统一西路与同德路交叉口西南角</view></view><map class="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers="{{markers}}"></map></view>

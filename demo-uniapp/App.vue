@@ -1,0 +1,22 @@
+<script>
+	export default {
+		// 应用的生命周期  参考：https://uniapp.dcloud.io/collocation/frame/lifecycle
+		onLaunch: function() {
+			console.log('App Launch')
+		},
+		onShow: function() {
+			console.log('App Show')
+		},
+		onHide: function() {
+			console.log('App Hide')
+		},
+		onError:function(err){
+			console.log('出现异常了',err)
+		}
+	}
+</script>
+
+<style>
+	/*每个页面公共css */
+	@import url("~@/static/iconfont/iconfont.css");
+</style>

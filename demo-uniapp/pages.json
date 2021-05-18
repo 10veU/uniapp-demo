@@ -1,0 +1,173 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages		
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+		    "path" : "pages/message/message",
+		    "style" : // 用于设置每个页面的状态栏、导航条、标题、窗口背景色等。注意：页面样式会覆盖全局样式。参考：https://uniapp.dcloud.io/collocation/pages?id=style                                                                                 
+		    {
+		        "navigationBarTitleText": "信息",
+		        "enablePullDownRefresh": true,
+				"h5":{
+					"enablePullDownRefresh":{
+						"color": "#ff3333"
+					}
+				}
+		    }
+		    
+		},{
+            "path" : "pages/contact/contact",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "联系我们",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/uni-style/uni-style",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/list/list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "列表页",
+				"onReachBottomDistance":200
+            }
+            
+        }
+        ,{
+            "path" : "pages/navigator/navigator",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "导航",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/component/component",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/component/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/component/a",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/component/b",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": { //全局配置样式，参考： https://uniapp.dcloud.io/collocation/pages?id=globalstyle
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#00ff7f",
+		"enablePullDownRefresh":true,//是否开启下拉刷新
+		"backgroundTextStyle":"dark"//下拉 loading 的样式
+	},
+	// 在 pages.json 中提供 tabBar 配置，不仅仅是为了方便快速开发导航，更重要的是在App和小程序端提升性能。
+	// 参考:https://uniapp.dcloud.io/collocation/pages?id=tabbar
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/tabBar/HOME.png",
+	        "selectedIconPath": "static/tabBar/HOME-ACTIVE.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/message/message",
+	        "iconPath": "static/tabBar/MESSAGE.png",
+	        "selectedIconPath": "static/tabBar/MESSAGE-ACTIVE.png",
+	        "text": "信息"
+	    }, {
+	        "pagePath": "pages/contact/contact",
+	        "iconPath": "static/tabBar/CONTACT.png",
+	        "selectedIconPath": "static/tabBar/CONTACT-ACTIVE.png",
+	        "text": "联系我们"
+	    }]
+	},
+	
+	// 启动模式配置，仅开发期间生效，用于模拟直达页面的场景，如：小程序转发后，用户点击所打开的页面。
+	// 参考：https://uniapp.dcloud.io/collocation/pages?id=condition
+	"condition": { //模式配置，仅开发期间生效
+	    "current": 0, //当前激活的模式（list 的索引项）
+	    "list": [{
+	            "name": "swiper", //模式名称
+	            "path": "pages/uni-style/uni-style", //启动页面，必选
+	            "query": "interval=4000&autoplay=false" //启动参数，在页面的onLoad函数里面得到。
+	        },
+	        {
+	            "name": "test",
+	            "path": "pages/list/list"
+	        },
+	        {
+	            "name": "home",
+	            "path": "pages/home/home"
+	        },
+			{
+			    "name": "navigator",
+			    "path": "pages/navigator/navigator"
+			},
+			{
+			    "name": "component",
+			    "path": "pages/component/component"
+			}
+	    ]
+	}
+}
